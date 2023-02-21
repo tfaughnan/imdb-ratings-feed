@@ -70,7 +70,7 @@ def main() -> int:
 
         fe = fg.add_entry()
         fe.id(movie_url)
-        fe.title(f'{movie_title} {movie_year} \u2605 {rating_stars}/10')
+        fe.title(f'{movie_title} {movie_year} &#x2605; {rating_stars}/10')
         fe.author(name=username)
         fe.published(rating_date)
         fe.updated(rating_date)
