@@ -74,8 +74,10 @@ def main() -> int:
         fe.author(name=username)
         fe.published(rating_date)
         fe.updated(rating_date)
-        fe.link(href=movie_url, rel='alternate')
-        fe.content(f'<img src="{movie_img_url}">', type='html')
+        fe.link(href=ratings_url, rel='alternate')
+        fe.content(f'<p>{username} rated <a href="{movie_url}">{movie_title} '
+                   f'{movie_year}</a></p><img src="{movie_img_url}">',
+                   type='html')
 
     atomfeed = fg.atom_str(pretty=True)
     print(atomfeed.decode())
