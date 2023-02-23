@@ -75,7 +75,7 @@ def main() -> int:
         fe.published(rating_date)
         fe.updated(rating_date)
         fe.link(href=movie_url, rel='alternate')
-        fe.content(f'<img src="{movie_img_url}">')
+        fe.content(f'<img src="{movie_img_url}">', type='html')
 
     atomfeed = fg.atom_str(pretty=True)
     print(atomfeed.decode())
